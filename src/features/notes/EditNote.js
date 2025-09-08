@@ -10,7 +10,7 @@ const EditNote = () => {
 
   const { username, isManager, isAdmin } = useAuth();
 
-  const { note } = useGetUsersQuery("notesList", {
+  const { note } = useGetNotesQuery("notesList", {
     selectFromResult: ({ data }) => ({
       note: data?.entities[id],
     }),
